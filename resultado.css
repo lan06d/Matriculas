@@ -1,0 +1,12 @@
+
+
+.resul_01{
+    float: center;
+    background-color:  rgb(109, 113, 109);
+    width: 600px;
+    height: 250px;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1rem;
+    text-align: center;
+}
