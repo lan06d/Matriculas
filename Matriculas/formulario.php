@@ -1,3 +1,8 @@
+<?php
+if(isset($_COOKIE['sesión'])){ 
+  header('Location:index.php');
+}?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,6 +59,12 @@
             <input type="radio" value="Si" name="adso">Si pertenece a ADSO.<br>
             <input type="radio" value="No" name="adso">NO pertenece a ADSO.<br>
             <br>
+            <?php
+            if(isset($_COOKIE['uexists'])){
+              $msn = $_COOKIE['uxists'];
+              echo '<label class="eregistro">'.$msn.'</label>';
+            } 
+            ?>
             <input href="bd.php" class="botons" type="submit" name="registrar" value="Enviar">
         </form>
     </section>
