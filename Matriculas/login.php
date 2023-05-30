@@ -1,3 +1,9 @@
+<?php
+if(isset($_COOKIE['sesión'])){
+//Mantener iniciada la sesión.
+  header('Location:index.php');
+}?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +23,14 @@
             <input class="controls" type="text" name="introducir_email" id="email" required="obligatorio" placeholder="Email">
             <label for=""></label> </label><br><br>
             <input class="controls" type="password" placeholder="contraseña" name="last_name" required>
+        
+          <?php
+                if(isset($_COOKIE['validar'])){
+                    $error = $_COOKIE['validar'];
+                    echo "<label class='error' >".$error."</label>";
+                }
+          ?>
+        
             <input href="bd.php" class="botons" type="submit" name="registrar" value="Inicia sesíon">
         </form>
     </section>
